@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CounterContainer from './containers/counter';
+import TodosContainer from './containers/toDoList';
+
+import ConnectCounterContainer from './containers/connectCounter';
+import ConnectTodosContainer from './containers/connectToDoList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <h2>hooks 형태</h2>
+        <CounterContainer />
+        <br />
+        <br />
+        <br />
+        <br />
+        <TodosContainer />
+      </div>
+
+      <div>
+        <h2>class 형태에서 사용하는 connect</h2>
+        <ConnectCounterContainer />
+        <ConnectTodosContainer />
+      </div>
     </div>
   );
 }
